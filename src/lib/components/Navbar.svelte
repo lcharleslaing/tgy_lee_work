@@ -5,24 +5,24 @@
     { title: "Home", href: "/" },
     {
       title: "Auth",
-      href: "/",
+      href: "#", // Updated to a placeholder since it has a submenu
       submenu: [
-        { title: "Register", href: "/" },
-        { title: "Signin", href: "/" },
-        { title: "Login", href: "/" },
+        { title: "Register", href: "/" }, // Link to your Register page
+        { title: "Signin", href: "/" }, // Link to your Login page
+        { title: "Logout", href: "/" }, // Link to your Logout page
       ],
     },
     {
       title: "Lee's Time",
-      href: "/",
+      href: "#", // Updated to a placeholder since it has a submenu
       submenu: [
-        { title: "Physical Work", href: "/" },
-        { title: "Brain Work", href: "/" },
-        { title: "Rates", href: "/" },
-        { title: "Categories", href: "/" },
+        { title: "Physical Work", href: "/physical-work" },
+        { title: "Brain Work", href: "/brain-work" },
+        { title: "Rates", href: "/rates" },
+        { title: "Categories", href: "/categories" },
       ],
     },
-    { title: "Reports", href: "/" },
+    { title: "Reports", href: "/reports" },
   ];
 </script>
 
