@@ -16,17 +16,17 @@
         { title: "Logout", href: "/" }, // Link to your Logout page
       ],
     },
-    {
-      title: "Lee's Time",
-      href: "#", // Updated to a placeholder since it has a submenu
-      submenu: [
-        { title: "Physical Work", href: "/physical-work" },
-        { title: "Brain Work", href: "/brain-work" },
-        { title: "Rates", href: "/rates" },
-        { title: "Categories", href: "/categories" },
-      ],
-    },
-    { title: "Reports", href: "/reports" },
+    // {
+    //   title: "Lee's Time",
+    //   href: "#", // Updated to a placeholder since it has a submenu
+    //   submenu: [
+    //     { title: "Physical Work", href: "/physical-work" },
+    //     { title: "Brain Work", href: "/brain-work" },
+    //     { title: "Rates", href: "/rates" },
+    //     { title: "Categories", href: "/categories" },
+    //   ],
+    // },
+    // { title: "Bible Ask Help", href: "/help/bible-ask" },
   ];
 </script>
 
