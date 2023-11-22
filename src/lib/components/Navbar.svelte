@@ -1,5 +1,9 @@
 <script>
+  import AppName from "./AppName.svelte";
   import MenuLinks from "./MenuLinks.svelte";
+  export const appname = import.meta.env
+    ? import.meta.env.VITE_APPNAME
+    : "DefaultAppName";
 
   const menuItems = [
     { title: "Home", href: "/" },
@@ -55,7 +59,7 @@
         <MenuLinks {menuItems} />
       </ul>
     </div>
-    <a href="/" class="btn btn-ghost text-xl">TG & Y Solutions/LCL Work</a>
+    <a href="/" class="btn btn-ghost text-xl"><AppName /></a>
   </div>
   <div class="navbar-center hidden lg:flex">
     <MenuLinks {menuItems} />

@@ -6,7 +6,7 @@
   import Login from "$lib/components/Login.svelte";
   import Logout from "$lib/components/Logout.svelte";
   import PasswordRecovery from "$lib/components/PasswordRecovery.svelte";
-
+  import AppName from "$lib/components/AppName.svelte";
   let showPasswordRecovery = false;
 
   onMount(() => {
@@ -27,41 +27,44 @@
   }
 </script>
 
-<main>
-  <h1 class="text-3xl text-center my-4 font-extrabold">
-    TG & Y Admin Interface
-  </h1>
+<!-- Auth Forms -->
+<div class="">
+  <main>
+    <h1 class="text-3xl text-center my-4 font-extrabold">
+      <AppName />
+    </h1>
 
-  {#if $user}
-    <section>
-      <h2>Logout</h2>
-      <Logout />
-    </section>
-  {:else}
-    <section>
-      <h2>Register</h2>
-      <Register />
-    </section>
-
-    <section>
-      <h2>Login</h2>
-      <Login />
-    </section>
-
-    <div class="flex flex-column justify-center my-4">
-      <button on:click={togglePasswordRecovery} class="btn btn-primary">
-        Forgot Password?
-      </button>
-    </div>
-
-    {#if showPasswordRecovery}
+    {#if $user}
       <section>
-        <h2>Recover Password</h2>
-        <PasswordRecovery onRecoveryComplete={handleRecoveryComplete} />
+        <h2>Logout</h2>
+        <Logout />
       </section>
+    {:else}
+      <section>
+        <h2>Register</h2>
+        <Register />
+      </section>
+
+      <section>
+        <h2>Login</h2>
+        <Login />
+      </section>
+
+      <div class="flex flex-column justify-center my-4">
+        <button on:click={togglePasswordRecovery} class="btn btn-primary">
+          Forgot Password?
+        </button>
+      </div>
+
+      {#if showPasswordRecovery}
+        <section>
+          <h2>Recover Password</h2>
+          <PasswordRecovery onRecoveryComplete={handleRecoveryComplete} />
+        </section>
+      {/if}
     {/if}
-  {/if}
-</main>
+  </main>
+</div>
 
 <style>
   h2 {
