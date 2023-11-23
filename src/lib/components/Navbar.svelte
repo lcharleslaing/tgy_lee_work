@@ -1,5 +1,6 @@
 <script>
   import AppName from "./AppName.svelte";
+  import LargeScreenMenuLinks from "./LargeScreenMenuLinks.svelte";
   import MenuLinks from "./MenuLinks.svelte";
   export const appname = import.meta.env
     ? import.meta.env.VITE_APPNAME
